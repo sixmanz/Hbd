@@ -85,7 +85,7 @@ const BirthdayCard = () => {
                         <AnimatePresence mode="wait">
                             <motion.img
                                 key={currentImage}
-                                src={import.meta.env.BASE_URL + images[currentImage]}
+                                src={images[currentImage]}
                                 initial={{ opacity: 0, scale: 1.1 }}
                                 animate={{ opacity: 1, scale: 1 }}
                                 exit={{ opacity: 0, scale: 0.9 }}
