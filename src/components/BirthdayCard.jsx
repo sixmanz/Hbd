@@ -3,12 +3,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Heart, Star, Sparkles, Wand2, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const images = [
-    './images/1.png',
-    './images/2.png',
-    './images/3.png',
-    './images/4.png',
+    'images/1.png',
+    'images/2.png',
+    'images/3.png',
+    'images/4.png',
 ];
-/* v1.0.1 - Refined paths */
 
 
 
@@ -86,7 +85,7 @@ const BirthdayCard = () => {
                         <AnimatePresence mode="wait">
                             <motion.img
                                 key={currentImage}
-                                src={images[currentImage]}
+                                src={`${import.meta.env.BASE_URL}${images[currentImage]}`}
                                 initial={{ opacity: 0, scale: 1.1 }}
                                 animate={{ opacity: 1, scale: 1 }}
                                 exit={{ opacity: 0, scale: 0.9 }}
@@ -160,6 +159,7 @@ const BirthdayCard = () => {
                     <Wand2 size={20} className="group-hover:rotate-12 transition-transform" />
                     <span className="text-sm sm:text-base tracking-widest uppercase">Make a Wish Again!</span>
                 </motion.button>
+                <p className="text-[10px] text-gray-300 mt-4 opacity-50">v1.0.2 - Path Fixed</p>
             </div>
         </motion.div>
     );
