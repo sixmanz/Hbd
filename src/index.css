@@ -42,6 +42,6 @@
 body {
   background: linear-gradient(135deg, #fff0f5 0%, #ffe4e1 100%);
   font-family: 'Fredoka', sans-serif;
-  overflow: hidden;
-  height: 100vh;
+  overflow-y: auto;
+  min-height: 100vh;
 }

@@ -8,7 +8,7 @@ function App() {
   const [isOpened, setIsOpened] = useState(false);
 
   return (
-    <div className="min-h-screen w-full flex items-center justify-center p-4 relative overflow-hidden bg-gray-50">
+    <div className="min-h-screen w-full flex items-center justify-center p-4 relative overflow-y-auto bg-gray-50">
       {/* Background Music - Plays immediately (with click handler fallback) */}
       <BackgroundMusic isPlaying={true} />
 

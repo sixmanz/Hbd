@@ -45,6 +45,17 @@ const BackgroundMusic = ({ isPlaying }) => {
         }
     };
 
+    const [audioSource, setAudioSource] = useState(import.meta.env.BASE_URL + "song.mp3");
+
+    const handleAudioError = () => {
+        if (audioSource.endsWith("song.mp3")) {
+            console.log("song.mp3 not found, falling back to generated audio.");
+            setAudioSource(import.meta.env.BASE_URL + "guncharlie.wav");
+        } else {
+            console.error("All audio sources failed.");
+        }
+    };
+
     if (!isPlaying) return null;
 
     return (
@@ -58,9 +69,9 @@ const BackgroundMusic = ({ isPlaying }) => {
             </button>
             <audio
                 ref={audioRef}
-                src={import.meta.env.BASE_URL + "birthday-song.wav"}
+                src={audioSource}
                 loop
-                onError={(e) => console.log("Audio file missing or error", e)}
+                onError={handleAudioError}
             />
         </div>
     );
