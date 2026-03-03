@@ -3,11 +3,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Heart, Star, Sparkles, Wand2, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const images = [
-    'images/1.png',
-    'images/2.png',
-    'images/3.png',
-    'images/4.png',
+    './images/1.png',
+    './images/2.png',
+    './images/3.png',
+    './images/4.png',
 ];
+/* v1.0.1 - Refined paths */
 
 
 
