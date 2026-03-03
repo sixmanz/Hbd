@@ -3,10 +3,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Heart, Star, Sparkles, Wand2, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const images = [
-    '/Happy-Birthday/images/1.png',
-    '/Happy-Birthday/images/2.png',
-    '/Happy-Birthday/images/3.png',
-    '/Happy-Birthday/images/4.png',
+    'images/1.png',
+    'images/2.png',
+    'images/3.png',
+    'images/4.png',
 ];
 
 
@@ -85,7 +85,7 @@ const BirthdayCard = () => {
                         <AnimatePresence mode="wait">
                             <motion.img
                                 key={currentImage}
-                                src={images[currentImage]}
+                                src={import.meta.env.BASE_URL + images[currentImage]}
                                 initial={{ opacity: 0, scale: 1.1 }}
                                 animate={{ opacity: 1, scale: 1 }}
                                 exit={{ opacity: 0, scale: 0.9 }}
